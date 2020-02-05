@@ -1,0 +1,470 @@
+@font-face {
+    font-family: 'Proxima Nova Th';
+    src: url('../fonts/ProximaNova-Extrabld.woff2') format('woff2'),
+        url('../fonts/ProximaNova-Extrabld.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Rg';
+    src: url('../fonts/ProximaNova-Regular.woff2') format('woff2'),
+        url('../fonts/ProximaNova-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Bl';
+    src: url('../fonts/ProximaNova-Black.woff2') format('woff2'),
+        url('../fonts/ProximaNova-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Th';
+    src: url('../fonts/ProximaNovaT-Thin.woff2') format('woff2'),
+        url('../fonts/ProximaNovaT-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Alt Rg';
+    src: url('../fonts/ProximaNovaA-Bold.woff2') format('woff2'),
+        url('../fonts/ProximaNovaA-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Alt Th';
+    src: url('../fonts/ProximaNovaA-Thin.woff2') format('woff2'),
+        url('../fonts/ProximaNovaA-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Rg';
+    src: url('../fonts/ProximaNova-Bold.woff2') format('woff2'),
+        url('../fonts/ProximaNova-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Alt Lt';
+    src: url('../fonts/ProximaNovaA-Light.woff2') format('woff2'),
+        url('../fonts/ProximaNovaA-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Freight';
+    src: url('../fonts/Freight-BigBold.woff2') format('woff2'),
+        url('../fonts/Freight-BigBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+*{
+    margin:0;
+    padding:0;
+    text-decoration:none;
+    list-style:none;
+}
+
+
+/* Scroll Bar Css Starts */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background-color: #ffffff;
+    box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.15);
+}
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 20px;
+    border-radius: 0;
+    background: #292929;
+    border: 2px solid #ffffff;
+    width: 8px;
+}
+::-webkit-scrollbar-thumb:active {
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    background: #616161;
+}
+/* Scroll Bar Css Ends */
+
+a:hover,
+a:focus,
+a:active{
+    text-decoration: none;
+}
+ol, ul{
+    margin: 0;
+    padding: 0;
+}
+img{
+    display: block;
+}
+h1,h2,h3{
+    font-family: 'Freight';
+}
+body{
+    font-family: 'Proxima Nova Rg';
+    font-size: 14px;
+    font-weight: 400;
+    background: #f7f7f7;
+    color: #000;
+    text-decoration: none;
+}
+
+/* **** Sidebar **** */
+.sidebar{
+    width: 190px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: 120;
+    overflow: auto;
+    -webkit-transition: .4s linear;
+    -moz-transition: .4s linear;
+    -ms-transition: .4s linear;
+    transition: .4s linear;
+}
+.logobox {
+    padding: 15px;
+}
+.logobox img{
+    margin: 0 auto;
+}
+.sidebar-links ul {
+    float: none;
+    margin: auto;
+    padding: 30px 0;
+    width: 110px;
+}
+.sidebar-links ul li {
+    font-size: 13px;
+    letter-spacing: 2px;
+    list-style: none;
+    text-transform: uppercase;
+    padding-bottom: 0px;
+    padding-top: 19px;
+    margin-bottom: 10px;
+}
+.sidebar-links ul li a {
+    color: #999;
+    position: relative;
+    display: inherit;
+    font-weight: bold;
+    -webkit-transition: 0.6s;
+    -o-transition: 0.6s;
+    transition: 0.6s;
+    border-bottom: 1px solid #999;
+}
+.sidebar-links ul li a span {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    margin-top: 0px;
+    height: 100%;
+    overflow: hidden;
+    -webkit-transition: 0.6s;
+    -o-transition: 0.6s;
+    transition: 0.6s;
+    border-bottom: 1px solid #000;
+}
+.sidebar-links ul li a span:before {
+    content: attr(rel);
+    position: absolute;
+    margin: 0;
+    left: 0;
+    top: 0;
+    padding: 0;
+    color: #000;
+}
+.sidebar-links ul li a:hover {
+    border-bottom: 1px solid #000;
+}
+.sidebar-links ul li a:hover span {
+    width: 100%;
+}
+/* **** End Sidebar **** */
+
+.contentbar-right{
+    background: #eee;
+    width: 100%;
+    padding-left: 190px;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* **** Slider **** */
+.slick-vertical .slick-slide{border: none;outline: none;}
+.slick-prev::before,
+.slick-next::before {
+    color: black;
+    display: none;
+}
+.slider-block{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+.slider-block img{width: 100%;height: 100vh;object-fit: cover;}
+.slick-dots{
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    left: auto;
+    margin: 0;
+    z-index: 99;
+    width: auto;
+    transform: translate(0,-50%);
+    bottom: auto;
+}
+.slick-dots li{
+    display: block;
+    margin: 0 0 10px;
+    width: auto;
+    height: auto;
+    background: transparent;
+}
+.slick-dots li:last-child{margin: 0;}
+.slick-dots li button{
+    width: auto;
+    height: auto;
+    background: transparent;
+}
+.slick-dots li button:before{
+    width: 8px;
+    height: 8px;
+    line-height: 8px;
+    background:#bbb;
+    color: #bbb;
+    border-radius: 50%;
+    opacity: 1;
+}
+.slick-dots li.slick-active button:before{
+    background:#ee5eb6 !important;
+    color: #ee5eb6;
+}
+.slick-dotted.slick-slider{margin: 0;}
+
+.slider-data{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translate(0,-50%);
+}
+.info-box {
+    padding: 30px 100px;
+}
+.info-box h1{
+    color: #111;
+    font-weight: normal;
+    font-size: 70px;
+    margin: 0 0 15px;
+}
+.info-box p{
+    font-size: 18px;
+    font-weight: 500;
+    color: #999;
+    margin: 0 0 30px;
+    line-height: 26px;
+}
+.info-box li{
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+}
+.info-box li:last-child{margin: 0;}
+.ic-box img{
+    width: auto;
+    height: auto;
+    margin: 0 auto 15px;
+}
+.ic-box p{
+    font-size: 16px;
+    font-weight: 600;
+    color: #111;
+    line-height: 22px;
+    text-align: center;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.btn-main{
+    padding: 10px 0;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    color: #111;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #111;
+    -webkit-transition: .4s linear;
+    -moz-transition: .4s linear;
+    -ms-transition: .4s linear;
+    transition: .4s linear;
+}
+.btn-main:before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #111;
+    top: 40px;
+    left: 0;
+    -webkit-transition: .4s linear;
+    -moz-transition: .4s linear;
+    -ms-transition: .4s linear;
+    transition: .4s linear;
+}
+.btn-main:hover{
+    color: #111;
+}
+.btn-main:hover:before{
+    top: 0;
+}
+/* **** End Slider **** */
+
+/* **** Digital **** */
+.digital-wrp{
+    width: 100%;
+    background: #fff;
+}
+.digital-wrp .container-fluid{padding: 0;}
+.digital-wrp .row{
+    align-items: center;
+}
+.digi-img img{
+    width: 100%;
+}
+.digital-data{
+    padding:  0 100px;
+}
+.digital-data h2{
+    color: #111;
+    font-weight: normal;
+    font-size: 70px;
+    margin: 0 0 25px;
+    line-height: 75px;
+}
+.digital-data p{
+    font-size: 16px;
+    font-weight: normal;
+    color: #7f7f7f;
+    margin: 0 0 25px;
+    line-height: 24px;
+}
+/* **** End Digital **** */
+
+/* **** Stay Touch **** */
+.stay-in-touch{
+    padding: 100px 0;
+    width: 100%;
+    background: #F3F3F3;
+}
+.stay-block{
+    width: 35%;
+    margin: 0 auto;
+    text-align: center;
+}
+.stay-block h2{
+    color: #111;
+    font-weight: normal;
+    font-size: 70px;
+    margin: 0 0 25px;
+    line-height: 75px;
+}
+.stay-block p{
+    font-size: 18px;
+    font-weight: normal;
+    color: #7f7f7f;
+    margin: 0 0 35px;
+    line-height: 26px;
+    text-align: center;
+}
+.subsbox .form-control{
+    padding: 12px 15px;
+    background: #fff;
+    border: 1px solid #DFDFDF;
+    border-radius: 0;
+    height: auto;
+    box-shadow: none;
+    font-size: 18px;
+    font-weight: normal;
+    color: #333;
+    margin: 0 0 45px;
+}
+.subsbox .btn-main{
+    margin: 0px auto 0;
+}
+/* **** End Stay Touch **** */
+
+/* **** Footer **** */
+footer{
+    background: #000000;
+    padding: 50px 0;
+    width: 100%;
+}
+footer ul{text-align: center;}
+footer ul li{
+    display: inline-block;
+    margin-right: 15px;
+}
+footer ul li:last-child{margin: 0;}
+footer ul li a{
+    display: inline-block;
+    position: relative;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    color: #fff;
+    font-size: 22px;
+    border-radius: 50%;
+    border: 1px solid #3f4046;
+    -webkit-transition: .4s linear;
+    -moz-transition: .4s linear;
+    -ms-transition: .4s linear;
+    transition: .4s linear;
+}
+footer ul li a:hover{
+    color: #ee5eb6;
+}
+/* **** End Footer **** */
+
+/* **** Responsive Header **** */
+.header{
+    padding: 10px;
+    background: #fff;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: none;
+}
+.mobile-logo{
+    padding: 3px 0;
+}
+.toggle-bx img{
+    float: right;
+    padding: 12px 0;
+}
+
+/* **** End Responsive Header **** */
